@@ -1,0 +1,9 @@
+project: savantenvs/Fun-ASR
+target: vad-audio
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/vad-audio/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_vad_audio
+    libfuzzer: true
+    timeout: 10
